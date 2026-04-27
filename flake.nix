@@ -36,5 +36,8 @@
     };
   in {
     packages.x86_64-linux.default = moltengamepadctl;
+    overlays.x86_64-linux.default = final: prev: {
+      inherit moltengamepadctl;
+    };
   };
 }
